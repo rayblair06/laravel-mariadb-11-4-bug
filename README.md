@@ -30,18 +30,21 @@ This error is caused by `mysqldump` enforcing TLS/SSL by default, even in non-SS
 
 ### 1. Build the Containers
 Run the following command to build the Docker containers:
+
 ```bash
 docker-compose -f docker-compose.yml build
 ```
 
 ### 2. Start the Containers
 Start the application container:
+
 ```bash
 docker-compose up -d --build app
 ```
 
 ### 3. Execute a MySQL Client Operation
 Run an example operation, such as `schema:dump`, to reproduce the issue:
+
 ```bash
 docker exec laravel-mariadb-11-4-bug-app-1 php artisan schema:dump
 ```

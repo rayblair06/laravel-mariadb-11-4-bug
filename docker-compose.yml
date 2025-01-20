@@ -29,16 +29,6 @@ services:
       - "--no-ansi"  # Disable ANSI colors in the output
     command: ["install"]  # Install PHP dependencies defined in composer.json
 
-  # artisan:
-  #   build:
-  #     context: .
-  #   networks:
-  #   - app_network
-  #   working_dir: /var/www/html
-  #   volumes:
-  #     - .:/var/www/html
-  #   entrypoint: ["php", "/var/www/html/artisan"]
-
   mysql:
     image: mysql:8.0
     restart: always
