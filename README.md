@@ -4,7 +4,7 @@ This repository demonstrates an issue with the `mariadb-client` on Alpine Linux,
 
 ## Problem Description
 
-When performing operations that rely on `mysqlclient` (such as `schema:dump`), you may encounter the following error:
+When performing operations that rely on `mysql` (alias `mariadb-client`) (such as `schema:dump`), you may encounter the following error:
 
 ```
 mysqldump: Deprecated program name. It will be removed in a future release, use '/usr/bin/mariadb-dump' instead
