@@ -75,6 +75,8 @@ RUN composer install \
 # Expose the port on which NGINX will be accessible
 EXPOSE 8080
 
+ADD ./Docker/my.cnf /etc/my.cnf.d/my.cnf
+
 # Start Supervisor, which will manage both NGINX and PHP-FPM
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
 

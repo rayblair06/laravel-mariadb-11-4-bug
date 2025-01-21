@@ -34,6 +34,7 @@ services:
     restart: always
     networks:
       - app_network
+    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: laravel
